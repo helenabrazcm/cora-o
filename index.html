@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Animação de Coração</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
 
+    <script>
+        // Simulando uma classe de Vetor simples para o código funcionar
+        class Vector {
+            constructor(x, y) { this.x = x; this.y = y; }
+            add(v) { return new Vector(this.x + v.x, this.y + v.y); }
+            subtract(v) { return new Vector(this.x - v.x, this.y - v.y); }
+            scale(s) { return new Vector(this.x * s, this.y * s); }
+        }
+
+        // Variáveis globais para o mouse e origem
+        const origin = new Vector(window.innerWidth / 2, window.innerHeight / 2);
+        const io = { mouse: new Vector(origin.x, origin.y) };
+
+        window.addEventListener('mousemove', (e) => {
+            io.mouse = new Vector(e.clientX, e.clientY);
+        });
+
+        // O código do JavaScript da sua imagem entrará aqui...
+        
+    </script>
+</body>
+</html>
